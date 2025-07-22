@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 from pathlib import Path
 
 # === Load YOLOv5 License Plate Detector ===
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')  # Replace with your trained weights
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='xyz.pt')
 model.conf = 0.4  # Confidence threshold
 
 # === Load Image ===
