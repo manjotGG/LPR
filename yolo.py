@@ -5,6 +5,19 @@ import numpy as np
 from matplotlib import pyplot as plt
 from pathlib import Path
 
+import yolov5
+
+# Load model directly from Hugging Face
+model = yolov5.load('keremberke/yolov5m-license-plate')
+
+# Set model parameters
+model.conf = 0.25  # NMS confidence threshold
+model.iou = 0.45   # NMS IoU threshold
+
+# Use in your existing code
+results = model(img)
+
+
 # === Load YOLOv5 License Plate Detector ===
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='xyz.pt')
 model.conf = 0.4  # Confidence threshold

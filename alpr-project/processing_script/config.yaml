@@ -1,0 +1,21 @@
+# YOLOv8 License Plate Detection Configuration
+
+# Dataset paths
+train: datasets/train/images
+val: datasets/val/images  
+test: datasets/test/images
+
+# Number of classes
+nc: 1
+
+# Class names
+names: 
+  0: license_plate
+
+# Training parameters
+epochs: 100
+batch_size: 16
+img_size: 640
+
+# Model architecture
+model: yolov8n.pt

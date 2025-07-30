@@ -30,7 +30,7 @@ def preprocess_for_ocr(image):
     thresh2 = cv2.adaptiveThreshold(enhanced, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
                                    cv2.THRESH_BINARY, 11, 2)
     
-    # Method 3: Inverted thresholding (for dark text on light background)
+    # Method 3: Inverted thresholding
     _, thresh3 = cv2.threshold(enhanced, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     
     return [thresh1, thresh2, thresh3, enhanced], ['Otsu', 'Adaptive', 'Inverted Otsu', 'Enhanced']
