@@ -71,7 +71,7 @@ python demo.py path/to/your/image.jpg
 
 ### 2. Process Single Image
 ```bash
-python indian_lpr_system.py --input image.jpg --output results/
+python indian_lpr_system.py --input C:\Users\Hemant\Downloads\PYTHON\LPR\alpr-project\processing_script\data\sample_images\sample_car.jpg --output C:\Users\Hemant\Downloads\PYTHON\LPR\alpr-project\processing_script\results\images
 ```
 
 ### 3. Process Video
